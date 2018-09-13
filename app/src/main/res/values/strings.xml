@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="name">Nome</string>
+    <string name="phone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="city">Cidade</string>
+    <string name="save">Salvar</string>
+    <string name="clear">Limpar</string>
+    <string name="show_contacts">Visualizar Contatos</string>
+    <string name="password">Senha</string>
+    <string name="cell_phone">Celular</string>
+    <string name="cpf">CPF</string>
+</resources>

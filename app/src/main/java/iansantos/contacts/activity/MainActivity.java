@@ -106,15 +106,15 @@ public class MainActivity extends AppCompatActivity {
     public void saveContact(View view) {
         if (areValidFields()) {
             Contact contact = new Contact(name.getText().toString(), phone.getText().toString(), email.getText().toString(), city.getText().toString(), password.getText().toString(), cellPhone.getText().toString(), cpf.getText().toString());
-            Map<String, Object> Contact = new HashMap<>();
-            Contact.put("name", contact.getName());
-            Contact.put("phone", contact.getPhone());
-            Contact.put("email", contact.getEmail());
-            Contact.put("city", contact.getCity());
-            Contact.put("password", contact.getPassword());
-            Contact.put("cellPhone", contact.getCellPhone());
-            Contact.put("cpf", contact.getCpf());
-            databaseReference.add(Contact).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            Map<String, Object> newContact = new HashMap<>();
+            newContact.put("name", contact.getName());
+            newContact.put("phone", contact.getPhone());
+            newContact.put("email", contact.getEmail());
+            newContact.put("city", contact.getCity());
+            newContact.put("password", contact.getPassword());
+            newContact.put("cellPhone", contact.getCellPhone());
+            newContact.put("cpf", contact.getCpf());
+            databaseReference.add(newContact).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                 @Override
                 public void onSuccess(DocumentReference documentReference) {
                     Log.i(TAG, "All changes were synchronized with the server");
